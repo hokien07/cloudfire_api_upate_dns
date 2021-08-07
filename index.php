@@ -32,7 +32,7 @@ foreach ($zones as $mZone)  {
                 "type" => "CNAME",
                 "name" => $record->name,
                 "content" =>$newCotent,
-                "ttl" => 1,
+                "ttl" => 1, // 1 is auto, maybe change to 120 or some thing
                 "proxied" => false
             ];
             $dns->updateRecordDetails($record->zone_id, $record->id, $update);
